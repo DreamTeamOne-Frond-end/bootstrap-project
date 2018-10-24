@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AngularJS — Superheroic JavaScript MVW Framework</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/bundle.js"></script>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a href="/" class="navbar-brand">
+            <img src="https://angularjs.org/img/angularjs-for-header-only.svg" alt="" class="img_brand">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar7">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse justify-content-stretch" id="navbar7">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase pr-4" href="#">Learn</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase pr-4" href="#">Develop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-uppercase pr-4" href="#">Discuss</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="mb-4 mt-4">
+
+      <div class="jumbotron bg-white pb-0">
+        <div class="container">
+          <h1 class="text-center display-3 framework"></h1>
+            <p class="text-center">
+                <a class="btn btn-primary btn-lg mb-4" href="#" role="button">Try the New Angular</a>
+            </p>
+            <p class="text-center">
+                <a class="btn btn-lg text-muted border border-secondary mb-3" href="#" role="button">Download AngularJS</a>
+            </p>
+            <div class="alert alert-warning text-center mt-2">
+                <span class="text-warning font-weight-bold m-0">
+                    AngularJS will be moving to Long Term Support (LTS) mode on July 1st 2018: Find out more.
+                </span>
+            </div>
+        </div>
+      </div>
+
+    <div class="jumbotron p-3 mb-5 mt-5 border-bottom shadow">
+        <div class="container">
+            <ul class="list-inline text-center m-3">
+                <li class="list-inline-item text-muted">View on GitHub</li>
+                <li class="list-inline-item">Follow +AngularJS on <img src="https://ssl.gstatic.com/images/icons/gplus-32.png" alt="" class="followers"></li> 
+                <li class="list-inline-item bg-primary"><a href="" class="text-white p-2">Follow @angular</a></li>
+                <li class="list-inline-item text-muted">Design Docs &amp; Notes</li>          
+            </ul>   
+        </div>   
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h4 class="text-muted">Why AngularJS?</h4>
+                <p>HTML is great for declaring static documents, but it falters when we try to use it for declaring dynamic views in web-applications.
+                    AngularJS lets you extend HTML vocabulary for your application.
+                    The resulting environment is extraordinarily expressive, readable, and quick to develop.
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h4 class="text-muted">Alternatives</h4>
+                <p>Other frameworks deal with HTML’s shortcomings by either abstracting away HTML, CSS, and/or JavaScript or by providing an
+                    imperative way for manipulating the DOM. Neither of these address the root problem that HTML was not designed for dynamic views.
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h4 class="text-muted">Extensibility</h4>
+                <p>AngularJS is a toolset for building the framework most suited to your application development.
+                    It is fully extensible and works well with other libraries. Every feature can be modified or replaced to suit
+                    your unique development workflow and feature needs. Read on to find out how.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="text-muted mb-4 mt-4">The Basics</h2>
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <ul class="nav nav-tabs mb-3" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#index" role="tab" data-toggle="tab">index.html</a>
+                    </li>
+                </ul>  
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane in active" id="index">
+                        <code>
+                            <ol>
+                                <li class="pl-2">&lt;!doctype html&gt;</li>
+                                <li class="pl-2">&lt;html <span class="bg-primary">ng-app</span>&gt;</li>
+                                <li class="pl-2">&lt;head&gt;</li>
+                                <li class="pl-2">&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/<span class="bg-primary">angular.min.js</span>"&gt;&lt;script&gt;</li>
+                                <li class="pl-2">&lt;/head&gt;</li>
+                                <li class="pl-2">&lt;body&gt;</li>
+                                <li class="pl-2">&lt;div&gt;</li>
+                                <li class="pl-2">&lt;label&gt;Name&lt;/label&gt;</li>
+                                <li class="pl-2">&lt;input type="text" <span class="bg-primary">ng-model</span>=yourName placeholder="Enter a name here"&gt;</li>
+                                <li class="pl-2">&lt;hr&gt;</li>
+                                <li class="pl-2">&lt;h1&gt; Hello <span class="bg-primary">{{yourName}}</span>&lt;/h1&gt;</li>
+                                <li class="pl-2">&lt;/div&gt;</li>
+                                <li class="pl-2">&lt;/body&gt;</li>
+                                <li class="pl-2">&lt;/html&gt;</li>
+                            </ol>
+                        </code>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <p>Hint: hover over <span>me</span></p>
+                
+                <div class="jumbotron pt-2 pm-4">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                    </form>
+                </div>
+                <h5>Watch as we build this app</h5>
+                <div class="col-md-12 p-0">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/uFTFsKmkQnQ?showInfo=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="text-muted mb-4 mt-5">Add Some Control</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h4>Data Binding</h4>
+                <p>Data-binding is an automatic way of updating the view whenever the model changes,
+                    as well as updating the model whenever the view changes.
+                    This is awesome because it eliminates DOM manipulation from the list of things you have to worry about.
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h4>Controller</h4>
+                <p>Controllers are the behavior behind the DOM elements. AngularJS lets you express the behavior in a clean readable form
+                    without the usual boilerplate of updating the DOM, registering callbacks or watching model changes.
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h4>Plain JavaScript</h4>
+                <p>Unlike other frameworks, there is no need to inherit from proprietary types in order to wrap the model in accessors methods.
+                    AngularJS models are plain old JavaScript objects. This makes your code easy to test, maintain, reuse, and again free from boilerplate.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12">
+                <ul class="nav nav-tabs mb-3" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#indexTodo" role="tab" data-toggle="tab">index.html</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#todoJs" role="tab" data-toggle="tab">todo.js</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#todoCss" role="tab" data-toggle="tab">todo.css</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane in active" id="indexTodo">
+                        <code>
+                            <ol>
+                                <li class="pl-2">&lt;!doctype html&gt;</li>
+                                <li class="pl-2">&lt;html <span class="bg-primary">ng-app</span>="todoApp"&gt;</li>
+                                <li class="pl-2">&lt;head&gt;</li>
+                                <li class="pl-2">&lt;script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/
+                                    <span class="bg-primary">angular.min.js</span>"&gt;&lt;script&gt;</li>
+                                <li class="pl-2">&lt;script src="<span class="bg-primary">todo.js</span>"&gt;&lt;/script&gt;</li>
+                                <li class="pl-2">&lt;link rel="stylesheet" href="todo.css"&gt;</li>
+                                <li class="pl-2">&lt;/head&gt;</li>
+                                <li class="pl-2">&lt;body&gt;</li>
+                                <li class="pl-2">&lt;h2&gt;Todo&lt;/h2&gt;</li>
+                                <li class="pl-2">&lt;div <span class="bg-primary">ng-controller</span>="TodoListController as todoList"&gt;</li>
+                                <li class="pl-2">&lt;span&gt; {{todoList.remaining()}} of {{todoList.todos.length}} remaining&lt;/span&gt;</li>
+                                <li class="pl-2"> [ &lt;a href="" <span  class="bg-primary">ng-click</span>="todoList.archive()">archive&lt;/a&gt; ]</li>
+                                <li class="pl-2">&lt;ul class="unstyled"&gt;</li>
+                                <li class="pl-2">&lt;li <span class="bg-primary">ng-repeat</span>="todo in todoList.todos"&gt;</li>
+                                <li class="pl-2">&lt;label class="checkbox"&gt;</li>
+                                <li class="pl-2">&lt;input type="checkbox" <span class="bg-primary">ng-model</span>=todo.done"&gt;</li>
+                                <li class="pl-2">&lt;span class="done-&lt;span&gt; {{todo.done}} &lt;/span&gt;</li>
+                                <li class="pl-2">&lt;/label&gt;</li>
+                                <li class="pl-2">&lt;/li&gt;</li>
+                                <li class="pl-2">&lt;/ul&gt;</li>
+                                <li class="pl-2">&lt;form <span class="bg-primary">ng-submit</span>="todoList.addTodo()"&gt; </li>
+                                <li class="pl-2">&lt;input type="text" ng-model="todoList.todoText" size="30"  placeholder="add new todo here" &gt;</li>
+                                <li class="pl-2">&lt;input type="text" class="btn-primary" type="submit" value="add"&gt;</li>
+                                <li class="pl-2">&lt;/form&gt;</li>
+                                <li class="pl-2">&lt;/div&gt;</li>
+                                <li class="pl-2">&lt;/body&gt;</li>
+                                <li class="pl-2">&lt;/html&gt;</li>
+                            </ol>
+                        </code>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="todoJs">
+                        <code>
+                            <ol>
+                                <li class="pl-2">angular.module('todoApp', [])</li>
+                                <li class="pl-2"> .controller('<span class="bg-primary">TodoListController</span>', function() {</li>
+                                <li class="pl-2">var todoList = this;</li>
+                                <li class="pl-2"> todoList.<span class="bg-primary">todos</span> = [</li>
+                                <li class="pl-2">{text:'learn AngularJS', done:true},</li>
+                                <li class="pl-2">{text:'build an AngularJS app', done:false}];</li>
+                                &nbsp;
+                                <li class="pl-2"> todoList.<span class="bg-primary">addTodo</span> = function() {</li>
+                                <li class="pl-2"> todoList.todos.<span class="bg-primary">push</span>({text:todoList.todoText, done:false});</li>
+                                <li class="pl-2">todoList.todoText = <span class="bg-primary">''</span>;</li>
+                                <li class="pl-2">todoList.<span class="bg-primary">remaining</span> = function() {</li>
+                                <li class="pl-2">var count = 0;</li>
+                                <li class="pl-2">angular.forEach(todoList.todos, function(todo) {</li>  
+                                <li class="pl-2">count += todo.done ? 0 : 1;</li> 
+                                <li class="pl-2">});</li>
+                                <li class="pl-2">return count;</li>
+                                <li class="pl-2">};</li>
+                                &nbsp;
+                                <li class="pl-2">todoList.archive = function() {</li> 
+                                <li class="pl-2">var oldTodos = todoList.todos;</li>
+                                <li class="pl-2">todoList.todos = [];</li>
+                                <li class="pl-2">angular.forEach(oldTodos, function(todo) {></li>
+                                <li class="pl-2">if (!todo.done) todoList.todos.push(todo);</li>
+                                <li class="pl-2">});</li>
+                                <li class="pl-2">};</li>
+                                <li class="pl-2">});</li>
+                            </ol>
+                        </code>
+                    </div>
+                    <div role="tabpanel" class="tab-pane fade" id="todoCss">
+                        <code>
+                            <ol>
+                                <li class="pl-2"><span class="bg-primary">.done-true</span> {</li>
+                                <li>text-decoration: line-through;</li>
+                                <li> color: grey;</li>
+                                <li> }</li>
+                            </ol>
+                        </code>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <div class="jumbotron pt-4 pb-3">
+                    <h2>Todo</h2>
+                    <p class="text-justify">1 of 2 remaining [ <a href="">archive</a> ]</p>
+                    <form class="form-inline" action="">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="">
+                                learn AngularJS
+                            </label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" value="">
+                                build an AngularJS app
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" placeholder="add new todo here" name="email">
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Add" />
+                    </form>
+                </div>
+                <h5>Watch as we build this app</h5>
+                <div class="col-md-12 p-0">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="https://www.youtube.com/embed/WuiHuZq_cg4" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="text-muted mb-4 mt-4">Navigation, Forms and Backends</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h4>Deep Linking</h4>
+                <p>A deep link reflects where the user is in the app. This is useful so users can bookmark and 
+                    email links to locations within the app.
+                    Round trip apps get this automatically, but AJAX apps by their nature do not.
+                    AngularJS combines the benefits of deep linking with desktop app-like behavior.
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h4>Form Validation</h4>
+                <p>Client-side form validation is an important part of a great user experience.
+                    AngularJS lets you declare the validation rules of the form without having to write JavaScript code.
+                Write less code, go have beer sooner.
+                </p>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12">
+                <h4>Server Communication</h4>
+                <p>AngularJS provides built-in services on top of XHR as well as various other backends using third party libraries.
+                    Promises further simplify your code by handling asynchronous return of data.
+                </p>
+            </div>
+        </div>
+    </div>
+
+      <div class="container">
+        <h2 class="text-muted mb-4 mt-4">Testability Built-in</h2>
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h4>Injectable</h4>
+                <p>The dependency injection in AngularJS allows you to declaratively describe how your application is wired.
+                    This means that your application needs no <code>main()</code> method which is usually an unmaintainable mess.
+                    Dependency injection is also a core to AngularJS.
+                    This means that any component which does not fit your needs can easily be replaced..
+                </p>
+            </div>
+            <div class="col-lg-6 col-md-4 col-sm-12">
+                <h4>Testable</h4>
+                <p>AngularJS provides built-in services on top of XHR as well as various other backends using third party libraries.
+                    Promises further simplify your code by handling asynchronous return of data.
+                </p>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<footer class="bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <p class="text-white my-2">Super-powered by Google ©2010-2018</p>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <p class="text-right my-2 text-primary"><a href="#top">Back to top</a></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="text-white">Code licensed under the <span class="text-primary">The MIT License</span>.
+                    Documentation licensed under <span class="text-primary">CC BY 4.0</span>CC BY 4.0.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
